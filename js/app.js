@@ -41,13 +41,13 @@ app.controller('LocationController', ['$scope', '$http', 'formData', 'dataStorag
         $scope.selected = $scope.places[0];
 
         $scope.getInfo = function (place) {
-
             var file = '/data/location/' + place.id + '.html?v' + dataStorage.version;
             $http.get(file, {cache: true})
-                .success(function(data){
+                .success(function (data) {
                     $scope.row = data;
                     $scope.selected = data;
                 });
         }
-
+        
+        $scope.getInfo($scope.places[0]);
     }]);

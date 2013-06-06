@@ -1,6 +1,6 @@
 angular.module('Service', [])
     .service('dataStorage', [function () {
-        this.version = 1;
+        this.version = 2;
         this.cache = {};
 
         this.setCache = function (id, data) {
