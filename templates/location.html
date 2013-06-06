@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="span2">
+        <ul class="nav nav-tabs nav-stacked">
+            <li data-ng-repeat="place in places">
+                <a href="javascript:void(0)" role="button" data-ng-click="getInfo(place)">{{place.name}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="span10" data-ng-bind-html="row">
+        {{row}}
+    </div>
+</div>

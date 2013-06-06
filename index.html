@@ -16,37 +16,51 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-sanitize.min.js"></script>
 
     <script src="/bootstrap/js/ui-bootstrap-tpls-0.2.0.min.js"></script>
 </head>
 <body data-ng-cloak>
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <a class="brand" href="/">AngularJS</a>
-            <ul class="nav">
-                <li class="divider-vertical"></li>
-                <li><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
-                <li class="divider-vertical"></li>
-                <li class="dropdown">
-                    <a href="#" id="link1" role="button" class="dropdown-toggle" data-toggle="dropdown">
-                        <i class="icon-eye-open icon-white"></i> Learn <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="link1">
-                        <li><a role="menuitem" tabindex="-1" data-ng-href="/protected/video/feeds">Behaviour</a></li>
-                        <li><a role="menuitem" tabindex="-1" data-ng-href="/protected/video/add">Nature</a></li>
-                    </ul>
-                </li>
-            </ul>
+<div id="wrap">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="/">AngularJS</a>
+                <ul class="nav">
+                    <li class="divider-vertical"></li>
+                    <li><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
+                    <li class="divider-vertical"></li>
+                    <li class="dropdown">
+                        <a href="#" id="link1" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-eye-open icon-white"></i> Learn <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="link1">
+                            <li><a role="menuitem" tabindex="-1" data-ng-href="/location">Location</a></li>
+                            <li><a role="menuitem" tabindex="-1" data-ng-href="/">Nature</a></li>
+                        </ul>
+                    </li>
+                </ul>
 
+            </div>
+        </div>
+    </div>
+    <div class="push-top"></div>
+    <div class="container">
+        <div id="view" data-ng-view></div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="span2"></div>
+            <div class="span10">
+                <p class="credit"> Designed and built with all the love :D</p>
+            </div>
         </div>
     </div>
 </div>
-<div class="push-top"></div>
-<div class="container">
-    <div id="view" data-ng-view></div>
-</div>
-
+<script src="/js/service.min.js"></script>
 <script src="/js/app.min.js"></script>
 </body>
 </html>
