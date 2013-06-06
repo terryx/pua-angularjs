@@ -38,14 +38,16 @@ app.controller('LocationController', ['$scope', '$http', 'formData', 'dataStorag
 
         $scope.row = '';
         $scope.places = formData.location;
-        $scope.getInfo = function (data) {
+        $scope.selected = $scope.places[0];
 
-            var file = '/data/location/' + data.id + '.html?v' + dataStorage.version;
+        $scope.getInfo = function (place) {
+
+            var file = '/data/location/' + place.id + '.html?v' + dataStorage.version;
             $http.get(file, {cache: true})
                 .success(function(data){
                     $scope.row = data;
+                    $scope.selected = data;
                 });
-
         }
 
     }]);
