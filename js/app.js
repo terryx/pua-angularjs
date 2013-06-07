@@ -54,4 +54,7 @@ app.controller('LocationController', ['$scope', '$http', 'formData', 'dataStorag
 
 app.controller('RequirementController', ['$scope', function($scope){
 
+    $scope.requirement = {
+        title : 'Smile'
+    }
 }]);
