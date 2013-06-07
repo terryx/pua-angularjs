@@ -2,7 +2,7 @@
 ErrorDocument 404 /index.html
 
 #Block bad bots
-RewriteEngine On 
+RewriteEngine On
 RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Bot\ mailto:craftbot@yahoo.com [OR]
 RewriteCond %{HTTP_USER_AGENT} ^ChinaClaw [OR]
@@ -88,5 +88,4 @@ deny from all
 </Files>
 
 #Prevent directory listings
-Options All -Indexes
- 
+#Options All -Indexes

@@ -21,6 +21,7 @@ angular.module('Service', [])
             {id: 1, name: 'Mall'},
             {id: 2, name: 'Church'},
             {id: 3, name: 'Street'},
-            {id: 4, name: 'Train Station'}
+            {id: 4, name: 'Train Station'},
+            {id: 5, name: 'Office / Workplace'}
         ];
     })

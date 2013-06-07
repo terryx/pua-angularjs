@@ -16,8 +16,9 @@ app.config(['$routeProvider', '$locationProvider',
                 templateUrl: '/templates/error.html',
                 controller: 'ErrorController'
             })
-            .when('/location/:place', {
-                controller: 'LocationController'
+            .when('/requirement', {
+                templateUrl: '/templates/requirement.html',
+                controller: 'RequirementController'
             })
             .otherwise({redirectTo: '/error'});
 
@@ -31,7 +32,6 @@ app.controller('HomeController', ['$scope', function ($scope) {
 
 app.controller('ErrorController', ['$scope', function ($scope) {
 }]);
-
 
 app.controller('LocationController', ['$scope', '$http', 'formData', 'dataStorage',
     function ($scope, $http, formData, dataStorage) {
@@ -48,6 +48,10 @@ app.controller('LocationController', ['$scope', '$http', 'formData', 'dataStorag
                     $scope.selected = data;
                 });
         }
-        
+
         $scope.getInfo($scope.places[0]);
     }]);
+
+app.controller('RequirementController', ['$scope', function($scope){
+
+}]);
