@@ -20,6 +20,10 @@ app.config(['$routeProvider', '$locationProvider',
                 templateUrl: '/templates/requirement.html',
                 controller: 'RequirementController'
             })
+            .when('/discussion', {
+                templateUrl: '/templates/discussion.html',
+                controller: 'DiscussionController'
+            })
             .otherwise({redirectTo: '/error'});
 
         $locationProvider.html5Mode(true);
@@ -57,4 +61,8 @@ app.controller('RequirementController', ['$scope', function($scope){
     $scope.requirement = {
         title : 'Smile'
     }
+}]);
+
+app.controller('DiscussionController', ['$scope', function ($scope) {
+
 }]);
