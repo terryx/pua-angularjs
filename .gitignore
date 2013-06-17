@@ -40,3 +40,4 @@ Thumbs.db
 # IDEs and TextEditors
 ######################
 .idea
+/HTML5Application/nbproject/private
