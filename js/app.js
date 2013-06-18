@@ -8,6 +8,10 @@ app.config(['$routeProvider', '$locationProvider',
                 templateUrl: '/templates/home.html',
                 controller: 'HomeController'
             })
+            .when('/index.html', {
+                templateUrl: '/templates/home.html',
+                controller: 'HomeController'
+            })
             .when('/location', {
                 templateUrl: '/templates/location.html',
                 controller: 'LocationController'
@@ -19,6 +23,10 @@ app.config(['$routeProvider', '$locationProvider',
             .when('/requirement', {
                 templateUrl: '/templates/requirement.html',
                 controller: 'RequirementController'
+            })
+            .when('/nature', {
+                templateUrl: '/templates/nature.html',
+                controller: 'NatureController'
             })
             .when('/discussion', {
                 templateUrl: '/templates/discussion.html',
@@ -64,5 +72,9 @@ app.controller('RequirementController', ['$scope', function($scope){
 }]);
 
 app.controller('DiscussionController', ['$scope', function ($scope) {
+
+}]);
+
+app.controller('NatureController', ['$scope', function ($scope) {
 
 }]);
