@@ -1,42 +1,5 @@
 var app = angular.module('App', ['ui.bootstrap', 'ngSanitize', 'Service']);
 
-app.config(['$routeProvider', '$locationProvider',
-    function ($routeProvider, $locationProvider) {
-
-        $routeProvider
-            .when('/', {
-                templateUrl: '/templates/home.html',
-                controller: 'HomeController'
-            })
-            .when('/index.html', {
-                templateUrl: '/templates/home.html',
-                controller: 'HomeController'
-            })
-            .when('/location', {
-                templateUrl: '/templates/location.html',
-                controller: 'LocationController'
-            })
-            .when('/error', {
-                templateUrl: '/templates/error.html',
-                controller: 'ErrorController'
-            })
-            .when('/requirement', {
-                templateUrl: '/templates/requirement.html',
-                controller: 'RequirementController'
-            })
-            .when('/nature', {
-                templateUrl: '/templates/nature.html',
-                controller: 'NatureController'
-            })
-            .when('/discussion', {
-                templateUrl: '/templates/discussion.html',
-                controller: 'DiscussionController'
-            })
-            .otherwise({redirectTo: '/error'});
-
-        $locationProvider.html5Mode(true);
-    }]);
-
 app.controller('HomeController', ['$scope', function ($scope) {
 
 
@@ -72,6 +35,10 @@ app.controller('RequirementController', ['$scope', function($scope){
 }]);
 
 app.controller('DiscussionController', ['$scope', function ($scope) {
+
+}]);
+
+app.controller('PhotoController', ['$scope', function($scope){
 
 }]);
 
